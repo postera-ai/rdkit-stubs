@@ -1,7 +1,5 @@
 from typing import Any, ClassVar
 
-
-
 class FreeChemicalFeature:
     __instance_size__: ClassVar[int] = ...
     __safe_for_unpickling__: ClassVar[bool] = ...

@@ -1,7 +1,5 @@
 from typing import Any
 
-
-
 class O3A:
     @classmethod
     def __init__(cls, *args, **kwargs) -> None: ...

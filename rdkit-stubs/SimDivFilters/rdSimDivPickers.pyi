@@ -1,7 +1,5 @@
 from typing import Any, ClassVar
 
-
-
 CENTROID: ClusterMethod
 CLINK: ClusterMethod
 GOWER: ClusterMethod

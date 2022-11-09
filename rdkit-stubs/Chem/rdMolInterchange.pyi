@@ -1,7 +1,5 @@
 from typing import Any, ClassVar
 
-
-
 class JSONParseParameters:
     __instance_size__: ClassVar[int] = ...
     parseConformers: Any

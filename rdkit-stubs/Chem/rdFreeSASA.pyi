@@ -1,7 +1,5 @@
 from typing import Any, ClassVar
 
-
-
 APolar: SASAClass
 LeeRichards: SASAAlgorithm
 NACCESS: SASAClassifier

@@ -1,7 +1,5 @@
 from typing import Any, ClassVar
 
-
-
 AtomPairFP: FPType
 MorganFP: FPType
 RDKitFP: FPType

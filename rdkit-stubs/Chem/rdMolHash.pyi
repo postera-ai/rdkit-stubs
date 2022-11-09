@@ -1,7 +1,5 @@
 from typing import Any, ClassVar
 
-
-
 class HashFunction:
     AnonymousGraph: ClassVar[HashFunction] = ...
     ArthorSubstructureOrder: ClassVar[HashFunction] = ...

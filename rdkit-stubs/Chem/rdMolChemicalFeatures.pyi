@@ -2,7 +2,6 @@ from typing import Any, ClassVar
 
 from typing import overload
 
-
 class MolChemicalFeature:
     @classmethod
     def __init__(cls, *args, **kwargs) -> None: ...

@@ -1,7 +1,5 @@
 from typing import Any, ClassVar
 
-
-
 class CoordGenParams:
     __instance_size__: ClassVar[int] = ...
     coordgenScaling: Any

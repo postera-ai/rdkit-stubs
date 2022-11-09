@@ -1,7 +1,5 @@
 from typing import Any, ClassVar
 
-
-
 class EmbedParameters:
     __instance_size__: ClassVar[int] = ...
     ETversion: Any
@@ -17,7 +15,7 @@ class EmbedParameters:
     numZeroFail: Any
     onlyHeavyAtomsForRMS: Any
     optimizerForceTol: Any
-    pruneRmsThresh: Any # used to filter multiple conformations
+    pruneRmsThresh: Any  # used to filter multiple conformations
     randNegEig: Any
     randomSeed: Any
     useBasicKnowledge: Any

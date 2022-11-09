@@ -2,7 +2,6 @@ from typing import Any, ClassVar
 
 from typing import overload
 
-
 class CachedMolHolder(MolHolderBase):
     __instance_size__: ClassVar[int] = ...
     @classmethod

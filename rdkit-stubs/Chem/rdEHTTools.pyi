@@ -1,7 +1,5 @@
 from typing import Any
 
-
-
 class EHTResults:
     @classmethod
     def __init__(cls, *args, **kwargs) -> None: ...

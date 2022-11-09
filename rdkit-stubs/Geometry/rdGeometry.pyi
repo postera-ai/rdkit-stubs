@@ -1,7 +1,5 @@
 from typing import Any, ClassVar
 
-
-
 class Point2D:
     __instance_size__: ClassVar[int] = ...
     __safe_for_unpickling__: ClassVar[bool] = ...

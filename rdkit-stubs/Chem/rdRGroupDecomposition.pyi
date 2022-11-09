@@ -1,7 +1,5 @@
 from typing import Any, ClassVar
 
-
-
 AtomIndexLabels: RGroupLabels
 AtomMap: RGroupLabelling
 AtomMapLabels: RGroupLabels

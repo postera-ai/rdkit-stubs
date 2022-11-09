@@ -1,7 +1,5 @@
 from typing import Any
 
-
-
 class TautomerQuery:
     def __init__(self, RDKit): ...
     @classmethod

@@ -1,7 +1,5 @@
 from typing import Any, ClassVar
 
-
-
 class FragCatGenerator:
     __instance_size__: ClassVar[int] = ...
     @classmethod

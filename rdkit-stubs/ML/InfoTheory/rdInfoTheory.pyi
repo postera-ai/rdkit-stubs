@@ -1,7 +1,5 @@
 from typing import Any, ClassVar
 
-
-
 BIASCHISQUARE: InfoType
 BIASENTROPY: InfoType
 CHISQUARE: InfoType

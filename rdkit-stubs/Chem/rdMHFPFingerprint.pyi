@@ -1,7 +1,5 @@
 from typing import Any, ClassVar
 
-
-
 class MHFPEncoder:
     __instance_size__: ClassVar[int] = ...
     @classmethod

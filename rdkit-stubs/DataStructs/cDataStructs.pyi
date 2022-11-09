@@ -2,7 +2,6 @@ from typing import Any, ClassVar
 
 from typing import overload
 
-
 EIGHTBITVALUE: DiscreteValueType
 FOURBITVALUE: DiscreteValueType
 ONEBITVALUE: DiscreteValueType
