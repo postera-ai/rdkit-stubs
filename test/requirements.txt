@@ -1,0 +1,7 @@
+mypy==0.990
+pyright==1.1.279
+rdkit==2022.03.3
+pytest==7.2.0
+
+# installs the rdkit-stubs package locally
+-e ..

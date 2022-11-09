@@ -1,0 +1,49 @@
+from _typeshed import Incomplete
+from rdkit import RDConfig as RDConfig
+from rdkit.VLib.Supply import SupplyNode as SupplyNode
+
+class _lazyDataSeq:
+    cursor: Incomplete
+    cmd: Incomplete
+    _first: int
+    _pickleCol: Incomplete
+    _depickle: Incomplete
+    _klass: Incomplete
+    def __init__(
+        self,
+        cursor,
+        cmd,
+        pickleCol: int = ...,
+        depickle: int = ...,
+        klass: Incomplete | None = ...,
+    ) -> None: ...
+    def _validate(self) -> None: ...
+    def __iter__(self): ...
+    def next(self): ...
+
+class _dataSeq(_lazyDataSeq):
+    cursor: Incomplete
+    cmd: Incomplete
+    res: Incomplete
+    rowCount: int
+    idx: int
+    _pickleCol: Incomplete
+    _depickle: Incomplete
+    def __init__(
+        self, cursor, cmd, pickleCol: int = ..., depickle: int = ...
+    ) -> None: ...
+    _first: Incomplete
+    def __iter__(self): ...
+    def next(self): ...
+    def __len__(self) -> int: ...
+    def __getitem__(self, idx): ...
+
+class DbPickleSupplyNode(SupplyNode):
+    _dbResults: Incomplete
+    _supplier: Incomplete
+    def __init__(self, cursor, cmd, binaryCol, **kwargs) -> None: ...
+    def reset(self) -> None: ...
+    def next(self): ...
+
+def GetNode(dbName, tableName): ...
+def _test(): ...

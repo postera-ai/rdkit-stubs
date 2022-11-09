@@ -1,0 +1,3 @@
+from rdkit.Chem.rdReducedGraphs import *
+
+def TanimotoSimilarity(arr1, arr2): ...

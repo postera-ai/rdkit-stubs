@@ -1,0 +1,23 @@
+from _typeshed import Incomplete
+from rdkit.rdBase import (
+    AttachFileToLog as AttachFileToLog,
+    DisableLog as DisableLog,
+    EnableLog as EnableLog,
+    LogMessage as LogMessage,
+)
+
+_levels: Incomplete
+DEBUG: int
+INFO: int
+WARNING: int
+ERROR: int
+CRITICAL: int
+
+class logger:
+    def logIt(self, dest, msg, *args, **kwargs) -> None: ...
+    def debug(self, msg, *args, **kwargs) -> None: ...
+    def error(self, msg, *args, **kwargs) -> None: ...
+    def info(self, msg, *args, **kwargs) -> None: ...
+    def warning(self, msg, *args, **kwargs) -> None: ...
+    def critical(self, msg, *args, **kwargs) -> None: ...
+    def setLevel(self, val) -> None: ...

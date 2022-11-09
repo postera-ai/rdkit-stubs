@@ -1,0 +1,4 @@
+Pipenv
+Pipenv.lock
+build
+rdkit_stubs.egg-info
