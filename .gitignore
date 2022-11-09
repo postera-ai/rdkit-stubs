@@ -1,4 +1,4 @@
-Pipenv
-Pipenv.lock
+Pipfile
+Pipfile.lock
 build
 rdkit_stubs.egg-info
