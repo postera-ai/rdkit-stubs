@@ -19,8 +19,7 @@ pip install rdkit-stubs
 ## Developing
 
 To test your contributions to these stubs you can import the local package from another one of your
-projects. First clone the repo then add `-e <path-to-this-repo>` to your packages
-requirements.txt.
+projects. First clone the repo then `pip install -e <path-to-this-repo>`.
 
 ## License
 
