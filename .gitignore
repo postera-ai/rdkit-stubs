@@ -2,3 +2,4 @@ Pipfile
 Pipfile.lock
 build
 rdkit_stubs.egg-info
+dist/

@@ -1,8 +1,9 @@
-from collections.abc import Iterable
-from setuptools import setup
 import os
-from typing import List
+from collections.abc import Iterable
 from pathlib import Path
+from typing import List
+
+from setuptools import setup
 
 
 def walk_files(root_dir: Path) -> Iterable[Path]:
@@ -21,6 +22,11 @@ def list_package_files() -> List[str]:
     )
 
 
+long_description = (Path(__file__).parent.resolve() / "README.md").read_text(
+    encoding="utf-8"
+)
+
+
 setup(
     name="rdkit-stubs",
     version="0.1",
@@ -37,4 +43,5 @@ setup(
         "Programming Language :: Python :: 3.10",
     ],
     install_requires=["rdkit==2022.03.3"],
+    long_description=long_description,
 )
