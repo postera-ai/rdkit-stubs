@@ -1,10 +1,13 @@
 from rdkit import Chem
-from rdkit.Chem import Mol, SDWriter
 import io
+
+from rdkit.Chem import Mol, SDWriter
 
 
 def sample_mol() -> Mol:
-    return Chem.MolFromSmiles("O=C(O)CCCCO/N=C(\\c1ccnnc1)c1cccc(C(F)(F)F)c1")
+    ret = Chem.MolFromSmiles("O=C(O)CCCCO/N=C(\\c1ccnnc1)c1cccc(C(F)(F)F)c1")
+    assert ret is not None
+    return ret
 
 
 def frob(mol: Mol):
