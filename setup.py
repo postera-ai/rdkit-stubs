@@ -29,7 +29,7 @@ long_description = (Path(__file__).parent.resolve() / "README.md").read_text(
 
 setup(
     name="rdkit-stubs",
-    version="0.2",
+    version="0.3",
     description="type stubs for rdkit",
     author="Andrew Dirksen",
     author_email="andrew@dirksen.com",

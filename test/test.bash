@@ -3,14 +3,17 @@
 set -euxo pipefail
 
 this_script="$(realpath "$0")"
+parent="$(dirname "$this_script")"
+cd "$parent"
+
+poetry install
 
 # typecheck and run tests in this directory
-cd  "$(dirname "$this_script")"
-pyright .
-mypy .
-pytest .
+poetry run pyright .
+poetry run mypy .
+poetry run pytest .
 
 # typecheck the stubs themselves
-cd  "$(dirname "$(dirname "$this_script")")"/rdkit-stubs
-pyright .
-mypy .
+cd ../rdkit-stubs
+poetry run --directory "$parent" pyright .
+poetry run --directory "$parent" mypy .

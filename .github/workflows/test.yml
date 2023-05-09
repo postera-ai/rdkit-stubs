@@ -16,5 +16,5 @@ jobs:
         with:
           python-version: "3.10"
           cache: "pip"
-      - run: (cd test; pip install -r requirements.txt)
+      - run: pip install poetry
       - run: ./test/test.bash

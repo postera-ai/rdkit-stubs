@@ -3,3 +3,5 @@ Pipfile.lock
 build
 rdkit_stubs.egg-info
 dist/
+__pycache__/
+
