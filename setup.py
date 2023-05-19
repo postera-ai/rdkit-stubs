@@ -29,10 +29,10 @@ long_description = (Path(__file__).parent.resolve() / "README.md").read_text(
 
 setup(
     name="rdkit-stubs",
-    version="0.3",
+    version="0.4",
     description="type stubs for rdkit",
-    author="Andrew Dirksen",
-    author_email="andrew@dirksen.com",
+    author="Andrew Dirksen, Ryan Rightmer",
+    author_email="andrew@dirksen.com, rrightmer@gmail.com",
     license="MIT OR Apache-2.0",
     url="https://github.com/postera-ai/rdkit-stubs",
     packages=["rdkit-stubs"],
