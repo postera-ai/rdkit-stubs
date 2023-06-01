@@ -1,9 +1,19 @@
 from types import TracebackType
-from typing import IO, Any, ClassVar, Iterable, List, Optional, TextIO, Tuple, Union, overload
+from typing import (
+    IO,
+    Any,
+    ClassVar,
+    Iterable,
+    List,
+    Optional,
+    TextIO,
+    Tuple,
+    Union,
+    overload,
+)
 
 from rdkit.Chem import Mol
 from rdkit.Chem.rdMolDescriptors import AtomPairsParameters
-
 
 class CXSmilesFields:
     CX_ALL: ClassVar[CXSmilesFields] = ...
