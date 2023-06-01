@@ -1,6 +1,8 @@
-from typing import Any, ClassVar
+from typing import Any, ClassVar, Sequence
 
 from typing import overload
+
+from rdkit.Chem.rdchem import Mol
 
 SANITIZE_ADJUST_REACTANTS: SanitizeFlags
 SANITIZE_ALL: SanitizeFlags
@@ -92,7 +94,9 @@ class ChemicalReaction:
     @classmethod
     def RunReactantInPlace(cls, *args, **kwargs) -> Any: ...
     @classmethod
-    def RunReactants(cls, RDKit, boost) -> Any: ...
+    def RunReactants(
+        cls, reactants: Sequence[Mol], max_products=1000
+    ) -> tuple[tuple[Mol]]: ...
     @classmethod
     def SetBoolProp(cls, *args, **kwargs) -> Any: ...
     @classmethod
