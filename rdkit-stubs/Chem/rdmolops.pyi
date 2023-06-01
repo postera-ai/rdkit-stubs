@@ -1,7 +1,7 @@
 from typing import Any, ClassVar, Sequence
 
 from rdkit.Chem.rdchem import Mol
-from DataStructs.cDataStructs import ExplicitBitVect
+from rdkit.DataStructs.cDataStructs import ExplicitBitVect
 
 ADJUST_IGNOREALL: AdjustQueryWhichFlags
 ADJUST_IGNORECHAINS: AdjustQueryWhichFlags
