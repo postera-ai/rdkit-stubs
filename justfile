@@ -10,3 +10,10 @@ publish:
     pyproject-build # pipx install build
     # upload
     twine upload dist/* # pipx install twine
+
+test:
+    ./test/test.bash
+
+fmt:
+    black .
+
