@@ -1,7 +1,7 @@
-from rdkit import Chem
 import io
 
-from rdkit.Chem import Mol, SDWriter
+from rdkit import Chem
+from rdkit.Chem import Mol, SDWriter, rdDistGeom
 
 
 def sample_mol() -> Mol:
@@ -41,6 +41,12 @@ def sdwriter():
     writer.SetProps(("asdf",))
 
 
+def embed():
+    mol = sample_mol()
+    rdDistGeom.EmbedMolecule(mol)
+
+
 def test_frob():
     frob(sample_mol())
     sdwriter()
+    embed()
