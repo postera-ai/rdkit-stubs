@@ -1,6 +1,7 @@
 from typing import Any, ClassVar, Sequence
 
 from rdkit.Chem.rdchem import Mol
+from rdkit.Chem.rdMolDescriptors import AtomPairsParameters
 from rdkit.DataStructs.cDataStructs import ExplicitBitVect
 
 ADJUST_IGNOREALL: AdjustQueryWhichFlags
@@ -175,7 +176,13 @@ class _vectN5RDKit9Chirality10StereoInfoE:
     @classmethod
     def __setitem__(cls, index, object) -> Any: ...
 
-def AddHs(RDKit) -> Any: ...
+def AddHs(
+    mol: Mol,
+    explicitOnly: bool = False,
+    addCoords: bool = False,
+    onlyOnAtoms: AtomPairsParameters | None = None,
+    addResidueInfo: bool = False,
+) -> Mol: ...
 def AddRecursiveQuery(*args, **kwargs) -> Any: ...
 def AddWavyBondsForStereoAny(RDKit) -> Any: ...
 def AdjustQueryProperties(RDKit) -> Any: ...

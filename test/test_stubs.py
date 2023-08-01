@@ -41,6 +41,20 @@ def sdwriter():
     writer.SetProps(("asdf",))
 
 
+def conformers():
+    mol = sample_mol()
+    rdDistGeom.EmbedMolecule(mol)
+    conf = mol.GetConformer()
+    poses = conf.GetPositions()
+    assert len(poses.shape) == 2
+    assert poses.shape[1] == 3
+
+
+def add_hs():
+    mol = sample_mol()
+    Chem.AddHs(mol)
+
+
 def embed():
     mol = sample_mol()
     rdDistGeom.EmbedMolecule(mol)
@@ -49,4 +63,6 @@ def embed():
 def test_frob():
     frob(sample_mol())
     sdwriter()
+    conformers()
+    add_hs()
     embed()
