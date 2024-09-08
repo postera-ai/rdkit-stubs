@@ -4,7 +4,7 @@ from rdkit.Chem import rdMolDescriptors as rdMolDescriptors
 
 _smartsPatterns: Incomplete
 _patternOrder: Incomplete
-defaultPatternFileName: Incomplete
+defaultPatternFileName: str
 
 def _ReadPatts(fileName): ...
 
