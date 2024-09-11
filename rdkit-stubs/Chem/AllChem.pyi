@@ -76,19 +76,21 @@ from rdkit.Chem.EnumerateStereoisomers import (
 from rdkit.Geometry import rdGeometry as rdGeometry
 from rdkit.RDLogger import logger as logger
 
-def TransformMol(mol: Mol, tform, confId: int = -1, keepConfs: bool = False) -> None: 
-    """  
+def TransformMol(mol: Mol, tform, confId: int = -1, keepConfs: bool = False) -> None:
+    """
     Applies the transformation (usually a 4x4 double matrix) to a molecule
     if keepConfs is False then all but that conformer are removed
     """
+
 def ComputeMolShape(
-    mol: Mol, confId: int = -1, boxDim=(20,20,20), spacing: float = 0.5, **kwargs
+    mol: Mol, confId: int = -1, boxDim=(20, 20, 20), spacing: float = 0.5, **kwargs
 ):
     """returns a grid representation of the molecule's shape"""
+
 def ComputeMolVolume(
     mol: Mol, confId: int = -1, gridSpacing: float = 0.2, boxMargin: float = 2.0
 ) -> float:
-    """ 
+    """
     Calculates the volume of a particular conformer of a molecule
     based on a grid-encoding of the molecular shape.
 
@@ -107,10 +109,15 @@ def ComputeMolVolume(
     >>> ComputeMolVolume(mol)
     20...
     """
+
 def GetConformerRMS(
-    mol: Mol, confId1: int, confId2: int, atomIds: Optional[npt.ArrayLike] = None, prealigned: bool = False
+    mol: Mol,
+    confId1: int,
+    confId2: int,
+    atomIds: Optional[npt.ArrayLike] = None,
+    prealigned: bool = False,
 ) -> float:
-    """ 
+    """
     Returns the RMS between two conformations.
     By default, the conformers will be aligned to the first conformer
     before the RMS calculation and, as a side-effect, the second will be left
@@ -126,10 +133,11 @@ def GetConformerRMS(
                     be unaligned and the second conformer be aligned
                     to the first
     """
+
 def GetConformerRMSMatrix(
     mol: Mol, atomIds: Optional[npt.ArrayLike] = None, prealigned: bool = False
 ) -> list[float]:
-    """ 
+    """
     Returns the RMS matrix of the conformers of a molecule.
     As a side-effect, the conformers will be aligned to the first
     conformer (i.e. the reference) and will left in the aligned state.
@@ -155,10 +163,13 @@ def GetConformerRMSMatrix(
     This way it can be directly used as distance matrix in e.g. Butina
     clustering.
     """
+
 def EnumerateLibraryFromReaction(
-    reaction: ChemicalReaction, sidechainSets: list[list[Mol]], returnReactants: bool = False
+    reaction: ChemicalReaction,
+    sidechainSets: list[list[Mol]],
+    returnReactants: bool = False,
 ) -> Generator[tuple[Mol, ...]]:
-    """ 
+    """
     Returns a generator for the virtual library defined by
     a reaction and a sequence of sidechain sets
 
@@ -191,6 +202,7 @@ def EnumerateLibraryFromReaction(
     >>> [Chem.MolToSmiles(next(r)[0]) for x in range(4)]
     ['NC=O', 'CNC=O', 'CCNC=O', 'CCCNC=O']
     """
+
 def ConstrainedEmbed(
     mol: Mol,
     core: Mol,
@@ -199,8 +211,8 @@ def ConstrainedEmbed(
     randomseed: int = 2342,
     getForceField=UFFGetMoleculeForceField,
     **kwargs
-) -> Mol: 
-    """ 
+) -> Mol:
+    """
     generates an embedding of a molecule where part of the molecule
     is constrained to have particular coordinates
 
@@ -230,7 +242,7 @@ def ConstrainedEmbed(
     >>> mol = AllChem.MolFromSmiles("c1nn(Cc2ccccc2)cc1-c3ccccc3")
 
     Now do the constrained embedding
-  
+
     >>> mol = AllChem.ConstrainedEmbed(mol, template)
 
     Demonstrate that the positions are nearly the same with template:
@@ -246,8 +258,9 @@ def ConstrainedEmbed(
     True
 
     """
+
 def AssignBondOrdersFromTemplate(refmol: Mol, mol: Mol) -> Mol:
-    """ 
+    """
     assigns bond orders to a molecule based on the
     bond orders in a template molecule
 
@@ -287,4 +300,5 @@ def AssignBondOrdersFromTemplate(refmol: Mol, mol: Mol) -> Mol:
     'COc1cc(-c2ccc3c(c2)Nc2ccc(CC(=O)N(C)C)cc2NC3=O)ccc1[N+](=O)[O-]'
 
     """
+
 def _runDoctests(verbose=None) -> None: ...

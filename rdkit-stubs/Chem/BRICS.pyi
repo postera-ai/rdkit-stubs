@@ -18,8 +18,8 @@ labels: Incomplete
 
 def FindBRICSBonds(
     mol: Mol, randomizeOrder: bool = False, silent: bool = True
-) -> Generator[tuple[tuple[int, int], tuple[str, str]], None, None]: 
-    """ 
+) -> Generator[tuple[tuple[int, int], tuple[str, str]], None, None]:
+    """
     returns the bonds in a molecule that BRICS would cleave
 
     >>> from rdkit import Chem
@@ -110,6 +110,7 @@ def BreakBRICSBonds(
     ['[4*]CCC', '[3*]O[3*]', '[4*]CC']
 
     """
+
 def BRICSDecompose(
     mol: Mol,
     allNodes: Optional[set[str]] = None,
@@ -119,8 +120,8 @@ def BRICSDecompose(
     keepNonLeafNodes: bool = False,
     singlePass: bool = False,
     returnMols: bool = False,
-) -> set[str] | ValuesView: 
-    """ 
+) -> set[str] | ValuesView:
+    """
     returns the BRICS decomposition for a molecule
 
     >>> from rdkit import Chem

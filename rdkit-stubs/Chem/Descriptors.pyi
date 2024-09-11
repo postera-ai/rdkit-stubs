@@ -49,8 +49,9 @@ The exact molecular weight of the molecule
 >>> ExactMolWt(Chem.MolFromSmiles('[13CH3]C'))
 31.05...
 """
+
 def NumValenceElectrons(mol: Chem.Mol) -> int:
-    """ 
+    """
     The number of valence electrons the molecule has
 
     >>> NumValenceElectrons(Chem.MolFromSmiles('CC'))
@@ -62,8 +63,9 @@ def NumValenceElectrons(mol: Chem.Mol) -> int:
     >>> NumValenceElectrons(Chem.MolFromSmiles('C(=O)'))
     12
     """
+
 def NumRadicalElectrons(mol: Chem.Mol) -> int:
-    """ 
+    """
     The number of radical electrons the molecule has
     (says nothing about spin state)
 
@@ -78,6 +80,7 @@ def NumRadicalElectrons(mol: Chem.Mol) -> int:
     >>> NumRadicalElectrons(Chem.MolFromSmiles('C[C]'))
     3
     """
+
 def _ChargeDescriptors(mol: Chem.Mol, force: bool = False) -> tuple[float, float]: ...
 def MaxPartialCharge(mol: Chem.Mol, force: bool = False) -> float: ...
 def MinPartialCharge(mol: Chem.Mol, force: bool = False) -> float: ...
@@ -87,7 +90,6 @@ def _FingerprintDensity(mol: Chem.Mol, func, *args, **kwargs) -> float: ...
 def FpDensityMorgan1(x) -> float: ...
 def FpDensityMorgan2(x) -> float: ...
 def FpDensityMorgan3(x) -> float: ...
-
 def setupAUTOCorrDescriptors() -> None:
     """Adds AUTOCORR descriptors to the default descriptor lists"""
 
@@ -109,6 +111,7 @@ class PropertyFunctor(rdMolDescriptors.PythonPropertyFunctor):
         numAtoms = NumAtoms()
         rdMolDescriptors.Properties.RegisterProperty(numAtoms)
     """
+
     def __init__(self, name, version) -> None: ...
     def __call__(self, mol) -> Any: ...
 
@@ -128,7 +131,8 @@ def CalcMolDescriptors(
 
     Returns
     -------
-    dict 
+    dict
          A dictionary with decriptor names as keys and the descriptor values as values
-    '''
+    """
+
 def _runDoctests(verbose: Incomplete | None = ...) -> None: ...

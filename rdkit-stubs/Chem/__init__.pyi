@@ -100,17 +100,19 @@ from rdkit.Geometry import rdGeometry as rdGeometry
 _HasSubstructMatchStr: Incomplete
 templDir: Incomplete
 
-def QuickSmartsMatch(smi: str, sma: str, unique: bool = True, display: bool = False) -> tuple[tuple[int, ...], ...]: ...
+def QuickSmartsMatch(
+    smi: str, sma: str, unique: bool = True, display: bool = False
+) -> tuple[tuple[int, ...], ...]: ...
 def CanonSmiles(smi: str, useChiral: int = 1) -> str: ...
-def SupplierFromFilename(fileN: str, delim: str = '', **kwargs): ...
+def SupplierFromFilename(fileN: str, delim: str = "", **kwargs): ...
 def FindMolChiralCenters(
     mol: Mol,
     force: bool = True,
     includeUnassigned: bool = False,
     includeCIP: bool = True,
     useLegacyImplementation: Optional[bool] = None,
-) -> list[tuple[int, str]]: 
-  """
+) -> list[tuple[int, str]]:
+    """
     >>> from rdkit import Chem
     >>> mol = Chem.MolFromSmiles('[C@H](Cl)(F)Br')
     >>> Chem.FindMolChiralCenters(mol)
@@ -133,7 +135,7 @@ def FindMolChiralCenters(
     >>> Chem.FindMolChiralCenters(mol,force=True,includeUnassigned=True)
     [(1, 'S'), (3, '?')]
 
-    The handling of unassigned stereocenters for dependent stereochemistry is not correct 
+    The handling of unassigned stereocenters for dependent stereochemistry is not correct
     using the legacy implementation:
 
     >>> Chem.FindMolChiralCenters(Chem.MolFromSmiles('C1CC(C)C(C)C(C)C1'),includeUnassigned=True)
@@ -157,7 +159,8 @@ def FindMolChiralCenters(
     >>> Chem.FindMolChiralCenters(Chem.MolFromSmiles('C1C[C@H](C)[C@H](C)[C@H](C)C1'), includeCIP=False, useLegacyImplementation=False)
     [(2, 'Tet_CCW'), (4, 'Tet_CCW'), (6, 'Tet_CCW')]
 
-  """
+    """
+
 def WrapLogs() -> None: ...
 def LogWarningMsg(msg: str) -> None: ...
 def LogErrorMsg(msg: str) -> None: ...

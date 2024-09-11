@@ -18,8 +18,8 @@ def BuildCatalog(
     minPath: int = 2,
     maxPath: int = 6,
     reportFreq: int = 10,
-): 
-    """ 
+):
+    """
     builds a fragment catalog from a set of molecules in a delimited text block
 
       **Arguments**
@@ -42,11 +42,12 @@ def BuildCatalog(
         a FragmentCatalog
 
     """
+
 def ScoreMolecules(
     suppl,
     catalog,
     maxPts: int = -1,
-    actName: str = '',
+    actName: str = "",
     acts: Optional[Sequence[int]] = None,
     nActs: int = 2,
     reportFreq: int = 10,
@@ -82,17 +83,18 @@ def ScoreMolecules(
           2) a list containing the on bit lists for each molecule
 
     """
+
 def ScoreFromLists(
     bitLists: Sequence[Sequence[int]],
     suppl,
     catalog,
     maxPts: int = -1,
-    actName: str = '',
+    actName: str = "",
     acts: Optional[Sequence[int]] = None,
     nActs: int = 2,
     reportFreq: int = 10,
-) -> tuple[npt.NDArray[np.int32]]: 
-    """  
+) -> tuple[npt.NDArray[np.int32]]:
+    """
     similar to _ScoreMolecules()_, but uses pre-calculated bit lists
     for the molecules (this speeds things up a lot)
 
@@ -119,18 +121,19 @@ def ScoreFromLists(
          the results table (a 3D array of ints nBits x 2 x nActs)
 
     """
+
 def CalcGains(
     suppl,
     catalog,
     topN: int = -1,
-    actName: str = '',
+    actName: str = "",
     acts: Optional[Sequence[int]] = None,
     nActs: int = 2,
     reportFreq: int = 10,
-    biasList = None,
+    biasList=None,
     collectFps: int = 0,
-): 
-    """ 
+):
+    """
     calculates info gains by constructing fingerprints
     *DOC*
 
@@ -138,24 +141,27 @@ def CalcGains(
         1) gains matrix
         2) list of fingerprints
     """
+
 def CalcGainsFromFps(
     suppl,
     fps,
     topN: int = -1,
-    actName: str = '',
+    actName: str = "",
     acts: Optional[Sequence[int]] = None,
     nActs: int = 2,
     reportFreq: int = 10,
-    biasList = None,
+    biasList=None,
 ):
-    """ 
+    """
     calculates info gains from a set of fingerprints
 
     *DOC*
     """
+
 def OutputGainsData(outF: IOBase, gains, cat, nActs: int = 2) -> None: ...
-def ProcessGainsData(inF: IOBase, delim: str = ',', idCol: int = 0, gainCol: int = 1):
+def ProcessGainsData(inF: IOBase, delim: str = ",", idCol: int = 0, gainCol: int = 1):
     """reads a list of ids and info gains out of an input file"""
+
 def ShowDetails(
     catalog,
     gains,
@@ -163,42 +169,43 @@ def ShowDetails(
     outF: IOBase = sys.stdout,
     idCol: int = 0,
     gainCol: int = 1,
-    outDelim: str = ',',
+    outDelim: str = ",",
 ) -> None:
     """
     gains should be a sequence of sequences.  The idCol entry of each
     sub-sequence should be a catalog ID.  _ProcessGainsData()_ provides
     suitable input.
     """
+
 def SupplierFromDetails(details): ...
 def Usage() -> None: ...
 
 class RunDetails:
-  numMols: int = -1
-  doBuild: int = 0
-  doSigs: int = 0
-  doScore: int = 0
-  doGains: int = 0
-  doDetails: int = 0
-  catalogName: Optional[str] = None
-  onBitsName: Optional[str] = None
-  scoresName: Optional[str] = None
-  gainsName: Optional[str] = None
-  dbName: str = ''
-  tableName: Optional[str] = None
-  detailsName: Optional[str] = None
-  inFileName: Optional[str] = None
-  fpName: Optional[str] = None
-  minPath: int = 2
-  maxPath: int = 6
-  smiCol: int = 1
-  actCol: int = -1
-  nameCol: int = -1
-  hasTitle: int = 1
-  nActs: int = 2
-  nBits: int = -1
-  delim: str = ','
-  biasList: Optional[tuple] = None
-  topN: int = -1
+    numMols: int = -1
+    doBuild: int = 0
+    doSigs: int = 0
+    doScore: int = 0
+    doGains: int = 0
+    doDetails: int = 0
+    catalogName: Optional[str] = None
+    onBitsName: Optional[str] = None
+    scoresName: Optional[str] = None
+    gainsName: Optional[str] = None
+    dbName: str = ""
+    tableName: Optional[str] = None
+    detailsName: Optional[str] = None
+    inFileName: Optional[str] = None
+    fpName: Optional[str] = None
+    minPath: int = 2
+    maxPath: int = 6
+    smiCol: int = 1
+    actCol: int = -1
+    nameCol: int = -1
+    hasTitle: int = 1
+    nActs: int = 2
+    nBits: int = -1
+    delim: str = ","
+    biasList: Optional[tuple] = None
+    topN: int = -1
 
 def ParseArgs(details: RunDetails) -> None: ...
