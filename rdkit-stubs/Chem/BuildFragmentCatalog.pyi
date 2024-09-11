@@ -50,8 +50,8 @@ def ScoreMolecules(
     acts: Optional[Sequence[int]] = None,
     nActs: int = 2,
     reportFreq: int = 10,
-) -> tuple[npt.NDArray[np.int32], list[list]]:
-    """ 
+) -> tuple[npt.NDArray[np.int32], Sequence[Sequence[int]]]:
+    """
     scores the compounds in a supplier using a catalog
 
       **Arguments**
@@ -83,7 +83,7 @@ def ScoreMolecules(
 
     """
 def ScoreFromLists(
-    bitLists: Sequence,
+    bitLists: Sequence[Sequence[int]],
     suppl,
     catalog,
     maxPts: int = -1,
