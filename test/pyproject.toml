@@ -3,7 +3,6 @@ name = "test"
 version = "0.1.0"
 description = ""
 authors = ["Your Name <you@example.com>"]
-readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -11,8 +10,7 @@ mypy = "^1.2.0"
 pyright = "^1.1.306"
 rdkit = "^2023.3.1"
 pytest = "^7.3.1"
-rdkit-stubs = {path = "..", develop = true}
-
+rdkit-stubs = { path = "..", develop = true }
 
 [build-system]
 requires = ["poetry-core"]
@@ -20,4 +18,3 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.pyright]
 typeCheckingMode = "strict"
-
