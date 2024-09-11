@@ -1,205 +1,233 @@
-from collections.abc import Callable
 from typing import Optional
 from rdkit import Chem
 from rdkit.Chem import rdMolDescriptors as rdMolDescriptors
 
-PMI1: Callable
-""" 
-First (smallest) principal moment of inertia
+def PMI1(
+    mol: Chem.Mol, confId: int = -1, useAtomicMasses: bool = True, force: bool = True
+) -> float:
+    """
+    First (smallest) principal moment of inertia
 
-**Arguments**
+    **Arguments**
 
-  - inMol: a molecule
+      - inMol: a molecule
 
-  - confId: (optional) the conformation ID to use
+      - confId: (optional) the conformation ID to use
 
-  - useAtomicMasses: (optional) toggles use of atomic masses in the
-    calculation. Defaults to True
-"""
-PMI2: Callable
-""" 
-Second principal moment of inertia
+      - useAtomicMasses: (optional) toggles use of atomic masses in the
+        calculation. Defaults to True
+    """
 
-**Arguments**
+def PMI2(
+    mol: Chem.Mol, confId: int = -1, useAtomicMasses: bool = True, force: bool = True
+) -> float:
+    """
+    Second principal moment of inertia
 
-  - inMol: a molecule
+    **Arguments**
 
-  - confId: (optional) the conformation ID to use
+      - inMol: a molecule
 
-  - useAtomicMasses: (optional) toggles use of atomic masses in the
-    calculation. Defaults to True
-"""
-PMI3: Callable
-""" 
-Third (largest) principal moment of inertia
+      - confId: (optional) the conformation ID to use
 
-**Arguments**
+      - useAtomicMasses: (optional) toggles use of atomic masses in the
+        calculation. Defaults to True
+    """
 
-  - inMol: a molecule
+def PMI3(
+    mol: Chem.Mol, confId: int = -1, useAtomicMasses: bool = True, force: bool = True
+) -> float:
+    """
+    Third (largest) principal moment of inertia
 
-  - confId: (optional) the conformation ID to use
+    **Arguments**
 
-  - useAtomicMasses: (optional) toggles use of atomic masses in the
-    calculation. Defaults to True
-"""
-NPR1: Callable
-""" 
-Normalized principal moments ratio 1 (=I1/I3)
+      - inMol: a molecule
 
-    from Sauer and Schwarz JCIM 43:987-1003 (2003)
-    https://doi.org/10.1021/ci025599w
+      - confId: (optional) the conformation ID to use
 
+      - useAtomicMasses: (optional) toggles use of atomic masses in the
+        calculation. Defaults to True
+    """
 
-**Arguments**
+def NPR1(
+    mol: Chem.Mol, confId: int = -1, useAtomicMasses: bool = True, force: bool = True
+) -> float:
+    """
+    Normalized principal moments ratio 1 (=I1/I3)
 
-  - inMol: a molecule
-
-  - confId: (optional) the conformation ID to use
-
-  - useAtomicMasses: (optional) toggles use of atomic masses in the
-    calculation. Defaults to True
-"""
-NPR2: Callable
-""" 
-Normalized principal moments ratio 2 (=I2/I3)
-
-    from Sauer and Schwarz JCIM 43:987-1003 (2003)
-    https://doi.org/10.1021/ci025599w
+        from Sauer and Schwarz JCIM 43:987-1003 (2003)
+        https://doi.org/10.1021/ci025599w
 
 
-**Arguments**
+    **Arguments**
 
-  - inMol: a molecule
+      - inMol: a molecule
 
-  - confId: (optional) the conformation ID to use
+      - confId: (optional) the conformation ID to use
 
-  - useAtomicMasses: (optional) toggles use of atomic masses in the
-    calculation. Defaults to True
-"""
-RadiusOfGyration: Callable
-""" 
-Radius of gyration
+      - useAtomicMasses: (optional) toggles use of atomic masses in the
+        calculation. Defaults to True
+    """
 
-    from Todeschini and Consoni "Descriptors from Molecular Geometry"
-    Handbook of Chemoinformatics
-    https://doi.org/10.1002/9783527618279.ch37
+def NPR2(
+    mol: Chem.Mol, confId: int = -1, useAtomicMasses: bool = True, force: bool = True
+) -> float:
+    """
+    Normalized principal moments ratio 2 (=I2/I3)
 
-    Definition:
-      for planar molecules: sqrt( sqrt(pm3*pm2)/MW )
-      for nonplanar molecules: sqrt( 2*pi*pow(pm3*pm2*pm1,1/3)/MW )
+        from Sauer and Schwarz JCIM 43:987-1003 (2003)
+        https://doi.org/10.1021/ci025599w
 
-**Arguments**
 
-  - inMol: a molecule
+    **Arguments**
 
-  - confId: (optional) the conformation ID to use
+      - inMol: a molecule
 
-  - useAtomicMasses: (optional) toggles use of atomic masses in the
-    calculation. Defaults to True
-"""
-InertialShapeFactor: Callable
-""" 
-Inertial shape factor
+      - confId: (optional) the conformation ID to use
 
-    from Todeschini and Consoni "Descriptors from Molecular Geometry"
-    Handbook of Chemoinformatics
-    https://doi.org/10.1002/9783527618279.ch37
+      - useAtomicMasses: (optional) toggles use of atomic masses in the
+        calculation. Defaults to True
+    """
 
-    Definition:
-      pm2 / (pm1*pm3)
+def RadiusOfGyration(
+    mol: Chem.Mol, confId: int = -1, useAtomicMasses: bool = True, force: bool = True
+) -> float:
+    """
+    Radius of gyration
 
-**Arguments**
+        from Todeschini and Consoni "Descriptors from Molecular Geometry"
+        Handbook of Chemoinformatics
+        https://doi.org/10.1002/9783527618279.ch37
 
-  - inMol: a molecule
+        Definition:
+          for planar molecules: sqrt( sqrt(pm3*pm2)/MW )
+          for nonplanar molecules: sqrt( 2*pi*pow(pm3*pm2*pm1,1/3)/MW )
 
-  - confId: (optional) the conformation ID to use
+    **Arguments**
 
-  - useAtomicMasses: (optional) toggles use of atomic masses in the
-    calculation. Defaults to True
-"""
-Eccentricity: Callable
-""" 
-molecular eccentricity
+      - inMol: a molecule
 
-    from Todeschini and Consoni "Descriptors from Molecular Geometry"
-    Handbook of Chemoinformatics
-    https://doi.org/10.1002/9783527618279.ch37
+      - confId: (optional) the conformation ID to use
 
-    Definition:
-      sqrt(pm3**2 -pm1**2) / pm3
+      - useAtomicMasses: (optional) toggles use of atomic masses in the
+        calculation. Defaults to True
+    """
 
-**Arguments**
+def InertialShapeFactor(
+    mol: Chem.Mol, confId: int = -1, useAtomicMasses: bool = True, force: bool = True
+) -> float:
+    """
+    Inertial shape factor
 
-  - inMol: a molecule
+        from Todeschini and Consoni "Descriptors from Molecular Geometry"
+        Handbook of Chemoinformatics
+        https://doi.org/10.1002/9783527618279.ch37
 
-  - confId: (optional) the conformation ID to use
+        Definition:
+          pm2 / (pm1*pm3)
 
-  - useAtomicMasses: (optional) toggles use of atomic masses in the
-    calculation. Defaults to True
-"""
-Asphericity: Callable
-""" 
-molecular asphericity
+    **Arguments**
 
-    from Todeschini and Consoni "Descriptors from Molecular Geometry"
-    Handbook of Chemoinformatics
-    https://doi.org/10.1002/9783527618279.ch37
+      - inMol: a molecule
 
-    Definition:
-      0.5 * ((pm3-pm2)**2 + (pm3-pm1)**2 + (pm2-pm1)**2)/(pm1**2+pm2**2+pm3**2)
+      - confId: (optional) the conformation ID to use
 
-**Arguments**
+      - useAtomicMasses: (optional) toggles use of atomic masses in the
+        calculation. Defaults to True
+    """
 
-  - inMol: a molecule
+def Eccentricity(
+    mol: Chem.Mol, confId: int = -1, useAtomicMasses: bool = True, force: bool = True
+) -> float:
+    """
+    molecular eccentricity
 
-  - confId: (optional) the conformation ID to use
+        from Todeschini and Consoni "Descriptors from Molecular Geometry"
+        Handbook of Chemoinformatics
+        https://doi.org/10.1002/9783527618279.ch37
 
-  - useAtomicMasses: (optional) toggles use of atomic masses in the
-    calculation. Defaults to True
-"""
-SpherocityIndex: Callable
-""" 
-Molecular spherocityIndex
+        Definition:
+          sqrt(pm3**2 -pm1**2) / pm3
 
-    from Todeschini and Consoni "Descriptors from Molecular Geometry"
-    Handbook of Chemoinformatics
-    https://doi.org/10.1002/9783527618279.ch37
+    **Arguments**
 
-    Definition:
-      3 * pm1 / (pm1+pm2+pm3) where the moments are calculated without weights
+      - inMol: a molecule
 
-**Arguments**
+      - confId: (optional) the conformation ID to use
 
-  - inMol: a molecule
+      - useAtomicMasses: (optional) toggles use of atomic masses in the
+        calculation. Defaults to True
+    """
 
-  - confId: (optional) the conformation ID to use
+def Asphericity(
+    mol: Chem.Mol, confId: int = -1, useAtomicMasses: bool = True, force: bool = True
+) -> float:
+    """
+    molecular asphericity
 
-"""
-PBF: Callable
-""" 
-Plane of best fit
-  from: https://doi.org/10.1021/ci300293f
+        from Todeschini and Consoni "Descriptors from Molecular Geometry"
+        Handbook of Chemoinformatics
+        https://doi.org/10.1002/9783527618279.ch37
 
-**Arguments**
+        Definition:
+          0.5 * ((pm3-pm2)**2 + (pm3-pm1)**2 + (pm2-pm1)**2)/(pm1**2+pm2**2+pm3**2)
 
-  - inMol: a molecule
+    **Arguments**
 
-  - confId: (optional) the conformation ID to use
+      - inMol: a molecule
 
-"""
-def CalcMolDescriptors3D(mol: Chem.Mol, confId: Optional[int]=None):
+      - confId: (optional) the conformation ID to use
+
+      - useAtomicMasses: (optional) toggles use of atomic masses in the
+        calculation. Defaults to True
+    """
+
+def SpherocityIndex(mol: Chem.Mol, confId: int = -1, force: bool = True) -> float:
+    """
+    Molecular spherocityIndex
+
+        from Todeschini and Consoni "Descriptors from Molecular Geometry"
+        Handbook of Chemoinformatics
+        https://doi.org/10.1002/9783527618279.ch37
+
+        Definition:
+          3 * pm1 / (pm1+pm2+pm3) where the moments are calculated without weights
+
+    **Arguments**
+
+      - inMol: a molecule
+
+      - confId: (optional) the conformation ID to use
+
+    """
+
+def PBF(mol: Chem.Mol, confId: int = -1) -> float:
+    """
+    Plane of best fit
+      from: https://doi.org/10.1021/ci300293f
+
+    **Arguments**
+
+      - inMol: a molecule
+
+      - confId: (optional) the conformation ID to use
+
+    """
+
+def CalcMolDescriptors3D(mol: Chem.Mol, confId: Optional[int] = None):
     """
     Compute all 3D descriptors of a molecule
-    
+
     Arguments:
     - mol: the molecule to work with
     - confId: conformer ID to work with. If not specified the default (-1) is used
-    
+
     Return:
-    
+
     dict
         A dictionary with decriptor names as keys and the descriptor values as values
 
-    raises a ValueError 
+    raises a ValueError
         If the molecule does not have conformers
     """
