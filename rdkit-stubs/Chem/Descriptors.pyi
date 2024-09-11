@@ -20,7 +20,7 @@ _descList: Incomplete
 
 def _setupDescriptors(namespace) -> None: ...
 
-MolWt: Callable
+MolWt: Callable[[Chem.Mol], float]
 """
 The average molecular weight of the molecule
 
@@ -29,9 +29,18 @@ The average molecular weight of the molecule
 >>> MolWt(Chem.MolFromSmiles('[NH4+].[Cl-]'))
 53.49...
 """
-def HeavyAtomMolWt(x: Chem.Mol): float
 
-ExactMolWt: Callable
+def HeavyAtomMolWt(x: Chem.Mol) -> float:
+    """The average molecular weight of the molecule ignoring hydrogens
+
+    >>> HeavyAtomMolWt(Chem.MolFromSmiles('CC'))
+    24.02...
+    >>> HeavyAtomMolWt(Chem.MolFromSmiles('[NH4+].[Cl-]'))
+    49.46
+
+    """
+
+ExactMolWt: Callable[[Chem.Mol], float]
 """
 The exact molecular weight of the molecule
 
@@ -103,10 +112,12 @@ class PropertyFunctor(rdMolDescriptors.PythonPropertyFunctor):
     def __init__(self, name, version) -> None: ...
     def __call__(self, mol) -> Any: ...
 
-def CalcMolDescriptors(mol: Chem.Mol, missingVal: Optional[float] = None, silent: bool = True):
-    ''' 
+def CalcMolDescriptors(
+    mol: Chem.Mol, missingVal: Optional[float] = None, silent: bool = True
+) -> dict[str, float | int]:
+    """
     calculate the full set of descriptors for a molecule
-        
+
     Parameters
     ----------
     mol : RDKit molecule
