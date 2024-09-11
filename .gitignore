@@ -1,7 +1,5 @@
-Pipfile
-Pipfile.lock
 build
 rdkit_stubs.egg-info
 dist/
 __pycache__/
-
+/poetry.lock
