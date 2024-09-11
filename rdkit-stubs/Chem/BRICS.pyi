@@ -69,10 +69,14 @@ def FindBRICSBonds(
     []
 
     """
+
 def BreakBRICSBonds(
-    mol: Mol, bonds: Optional[list[tuple[tuple[int, int], tuple[str, str]]]] = None, sanitize: bool = True, silent: bool = True
-): 
-    """ 
+    mol: Mol,
+    bonds: Optional[list[tuple[tuple[int, int], tuple[str, str]]]] = None,
+    sanitize: bool = True,
+    silent: bool = True,
+) -> Mol:
+    """
     breaks the BRICS bonds in a molecule and returns the results
 
     >>> from rdkit import Chem
