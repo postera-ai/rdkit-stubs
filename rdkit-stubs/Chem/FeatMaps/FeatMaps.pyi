@@ -20,6 +20,7 @@ class FeatMapParams:
         Gaussian: int
         Triangle: int
         Box: int
+
     featProfile: Incomplete
 
 class FeatMap:
