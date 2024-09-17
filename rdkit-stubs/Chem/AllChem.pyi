@@ -168,7 +168,7 @@ def EnumerateLibraryFromReaction(
     reaction: ChemicalReaction,
     sidechainSets: list[list[Mol]],
     returnReactants: bool = False,
-) -> Generator[tuple[Mol, ...]]:
+) -> Generator[tuple[Mol, ...], None, None]:
     """
     Returns a generator for the virtual library defined by
     a reaction and a sequence of sidechain sets
