@@ -1,8 +1,7 @@
-from _typeshed import Incomplete
 from collections.abc import Sequence
-from io import IOBase, TextIOWrapper
+from io import IOBase
 import sys
-from typing import Optional
+from typing import Optional, TextIO
 import numpy as np
 import numpy.typing as npt
 from rdkit import RDConfig as RDConfig
@@ -166,7 +165,7 @@ def ShowDetails(
     catalog,
     gains,
     nToDo: int = -1,
-    outF: IOBase = sys.stdout,
+    outF: TextIO = sys.stdout,
     idCol: int = 0,
     gainCol: int = 1,
     outDelim: str = ",",
