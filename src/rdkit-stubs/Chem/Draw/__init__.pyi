@@ -30,7 +30,7 @@ def MolToImage(
     fitImage: bool = ...,
     options: Incomplete | None = ...,
     canvas: Incomplete | None = ...,
-    **kwargs
+    **kwargs,
 ): ...
 def _legacyMolToFile(
     mol, fileName, size, kekulize, wedgeBonds, imageType, fitImage, options, **kwargs
@@ -44,7 +44,7 @@ def MolToFile(
     imageType: Incomplete | None = ...,
     fitImage: bool = ...,
     options: Incomplete | None = ...,
-    **kwargs
+    **kwargs,
 ) -> None: ...
 def MolToImageFile(
     mol, filename, size=..., kekulize: bool = ..., wedgeBonds: bool = ..., **kwargs
@@ -56,7 +56,7 @@ def ShowMol(
     wedgeBonds: bool = ...,
     title: str = ...,
     stayInFront: bool = ...,
-    **kwargs
+    **kwargs,
 ) -> None: ...
 def MolToMPL(
     mol,
@@ -66,7 +66,7 @@ def MolToMPL(
     imageType: Incomplete | None = ...,
     fitImage: bool = ...,
     options: Incomplete | None = ...,
-    **kwargs
+    **kwargs,
 ): ...
 def _bivariate_normal(
     X,
@@ -90,7 +90,7 @@ def _moltoimg(
     legend,
     returnPNG: bool = ...,
     drawOptions: Incomplete | None = ...,
-    **kwargs
+    **kwargs,
 ): ...
 def _moltoSVG(
     mol,
@@ -99,7 +99,7 @@ def _moltoSVG(
     legend,
     kekulize,
     drawOptions: Incomplete | None = ...,
-    **kwargs
+    **kwargs,
 ): ...
 def _MolsToGridImage(
     mols,
@@ -110,7 +110,7 @@ def _MolsToGridImage(
     highlightBondLists: Incomplete | None = ...,
     drawOptions: Incomplete | None = ...,
     returnPNG: bool = ...,
-    **kwargs
+    **kwargs,
 ): ...
 def _MolsToGridSVG(
     mols,
@@ -120,7 +120,7 @@ def _MolsToGridSVG(
     highlightAtomLists: Incomplete | None = ...,
     highlightBondLists: Incomplete | None = ...,
     drawOptions: Incomplete | None = ...,
-    **kwargs
+    **kwargs,
 ): ...
 def MolsToGridImage(
     mols,
@@ -131,7 +131,7 @@ def MolsToGridImage(
     highlightBondLists: Incomplete | None = ...,
     useSVG: bool = ...,
     returnPNG: bool = ...,
-    **kwargs
+    **kwargs,
 ): ...
 def _legacyReactionToImage(rxn, subImgSize=..., **kwargs): ...
 def ReactionToImage(
@@ -140,7 +140,7 @@ def ReactionToImage(
     useSVG: bool = ...,
     drawOptions: Incomplete | None = ...,
     returnPNG: bool = ...,
-    **kwargs
+    **kwargs,
 ): ...
 def MolToQPixmap(
     mol,
@@ -149,7 +149,7 @@ def MolToQPixmap(
     wedgeBonds: bool = ...,
     fitImage: bool = ...,
     options: Incomplete | None = ...,
-    **kwargs
+    **kwargs,
 ): ...
 def DrawMorganBit(mol, bitId, bitInfo, whichExample: int = ..., **kwargs): ...
 def DrawMorganBits(tpls, **kwargs): ...
@@ -171,7 +171,7 @@ def _getMorganEnv(
     ringColor,
     centerColor,
     extraColor,
-    **kwargs
+    **kwargs,
 ): ...
 def DrawMorganEnvs(
     envs,
@@ -185,7 +185,7 @@ def DrawMorganEnvs(
     extraColor=...,
     legends: Incomplete | None = ...,
     drawOptions: Incomplete | None = ...,
-    **kwargs
+    **kwargs,
 ): ...
 def DrawMorganEnv(
     mol,
@@ -199,7 +199,7 @@ def DrawMorganEnv(
     centerColor=...,
     extraColor=...,
     drawOptions: Incomplete | None = ...,
-    **kwargs
+    **kwargs,
 ): ...
 def DrawRDKitBits(tpls, **kwargs): ...
 def DrawRDKitBit(mol, bitId, bitInfo, whichExample: int = ..., **kwargs): ...
@@ -217,7 +217,7 @@ def DrawRDKitEnvs(
     nonAromaticColor: Incomplete | None = ...,
     legends: Incomplete | None = ...,
     drawOptions: Incomplete | None = ...,
-    **kwargs
+    **kwargs,
 ): ...
 def DrawRDKitEnv(
     mol,
@@ -229,6 +229,6 @@ def DrawRDKitEnv(
     extraColor=...,
     nonAromaticColor: Incomplete | None = ...,
     drawOptions: Incomplete | None = ...,
-    **kwargs
+    **kwargs,
 ): ...
 def SetComicMode(opts) -> None: ...

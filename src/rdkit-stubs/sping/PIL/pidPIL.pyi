@@ -37,7 +37,7 @@ class PILCanvas(Canvas):
         color: Incomplete | None = ...,
         width: Incomplete | None = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawPolygon(
         self,
@@ -47,7 +47,7 @@ class PILCanvas(Canvas):
         fillColor: Incomplete | None = ...,
         closed: int = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawString(
         self,
@@ -57,7 +57,7 @@ class PILCanvas(Canvas):
         font: Incomplete | None = ...,
         color: Incomplete | None = ...,
         angle: int = ...,
-        **kwargs
+        **kwargs,
     ): ...
     def drawImage(
         self,
@@ -66,7 +66,7 @@ class PILCanvas(Canvas):
         y1,
         x2: Incomplete | None = ...,
         y2: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
 
 def test(): ...

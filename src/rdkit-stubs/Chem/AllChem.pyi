@@ -210,7 +210,7 @@ def ConstrainedEmbed(
     coreConfId: int = -1,
     randomseed: int = 2342,
     getForceField=UFFGetMoleculeForceField,
-    **kwargs
+    **kwargs,
 ) -> Mol:
     """
     generates an embedding of a molecule where part of the molecule

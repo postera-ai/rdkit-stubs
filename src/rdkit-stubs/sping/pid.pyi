@@ -80,7 +80,7 @@ class Canvas:
         font: Incomplete | None = ...,
         color: Incomplete | None = ...,
         angle: int = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawLine(
         self,
@@ -91,7 +91,7 @@ class Canvas:
         color: Incomplete | None = ...,
         width: Incomplete | None = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawLines(
         self,
@@ -99,7 +99,7 @@ class Canvas:
         color: Incomplete | None = ...,
         width: Incomplete | None = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawString(
         self,
@@ -109,7 +109,7 @@ class Canvas:
         font: Incomplete | None = ...,
         color: Incomplete | None = ...,
         angle: int = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawCurve(
         self,
@@ -126,7 +126,7 @@ class Canvas:
         fillColor: Incomplete | None = ...,
         closed: int = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawRect(
         self,
@@ -138,7 +138,7 @@ class Canvas:
         edgeWidth: Incomplete | None = ...,
         fillColor: Incomplete | None = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawRoundRect(
         self,
@@ -152,7 +152,7 @@ class Canvas:
         edgeWidth: Incomplete | None = ...,
         fillColor: Incomplete | None = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawEllipse(
         self,
@@ -164,7 +164,7 @@ class Canvas:
         edgeWidth: Incomplete | None = ...,
         fillColor: Incomplete | None = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawArc(
         self,
@@ -178,7 +178,7 @@ class Canvas:
         edgeWidth: Incomplete | None = ...,
         fillColor: Incomplete | None = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawPolygon(
         self,
@@ -188,7 +188,7 @@ class Canvas:
         fillColor: Incomplete | None = ...,
         closed: int = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawFigure(
         self,
@@ -198,7 +198,7 @@ class Canvas:
         fillColor: Incomplete | None = ...,
         closed: int = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawImage(
         self,
@@ -207,7 +207,7 @@ class Canvas:
         y1,
         x2: Incomplete | None = ...,
         y2: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
 
 def getFileObject(file, openFlags: str = ...): ...

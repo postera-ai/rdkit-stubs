@@ -76,7 +76,7 @@ class PSCanvas(Canvas):
         color: Incomplete | None = ...,
         width: Incomplete | None = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawLines(
         self,
@@ -84,7 +84,7 @@ class PSCanvas(Canvas):
         color: Incomplete | None = ...,
         width: Incomplete | None = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def _escape(self, s): ...
     def _drawStringOneLineNoRot(
@@ -98,7 +98,7 @@ class PSCanvas(Canvas):
         font: Incomplete | None = ...,
         color: Incomplete | None = ...,
         angle: int = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawString(
         self,
@@ -108,7 +108,7 @@ class PSCanvas(Canvas):
         font: Incomplete | None = ...,
         color: Incomplete | None = ...,
         angle: int = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawCurve(
         self,
@@ -125,7 +125,7 @@ class PSCanvas(Canvas):
         fillColor: Incomplete | None = ...,
         closed: int = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawRoundRect(
         self,
@@ -139,7 +139,7 @@ class PSCanvas(Canvas):
         edgeWidth: Incomplete | None = ...,
         fillColor: Incomplete | None = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawEllipse(
         self,
@@ -151,7 +151,7 @@ class PSCanvas(Canvas):
         edgeWidth: Incomplete | None = ...,
         fillColor: Incomplete | None = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawArc(
         self,
@@ -165,7 +165,7 @@ class PSCanvas(Canvas):
         edgeWidth: Incomplete | None = ...,
         fillColor: Incomplete | None = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def _genArcCode(self, x1, y1, x2, y2, startAng, extent): ...
     def drawPolygon(
@@ -176,7 +176,7 @@ class PSCanvas(Canvas):
         fillColor: Incomplete | None = ...,
         closed: int = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawFigure(
         self,
@@ -186,7 +186,7 @@ class PSCanvas(Canvas):
         fillColor: Incomplete | None = ...,
         closed: int = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def _drawImageLevel1(
         self,
@@ -195,7 +195,7 @@ class PSCanvas(Canvas):
         y1,
         x2: Incomplete | None = ...,
         y2: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def _AsciiHexEncode(self, input): ...
     def _drawImageLevel2(

@@ -12,5 +12,5 @@ def CrossValidationDriver(
     tolerance: float = ...,
     calcTotalError: int = ...,
     hiddenSizes: Incomplete | None = ...,
-    **kwargs
+    **kwargs,
 ): ...

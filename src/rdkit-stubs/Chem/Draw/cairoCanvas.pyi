@@ -49,5 +49,5 @@ class Canvas(CanvasBase):
         fill: bool = ...,
         stroke: bool = ...,
         alpha: float = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...

@@ -34,7 +34,7 @@ class QtCanvas(pid.Canvas):
         color: Incomplete | None = ...,
         width: Incomplete | None = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawPolygon(
         self,
@@ -44,7 +44,7 @@ class QtCanvas(pid.Canvas):
         fillColor=...,
         closed: int = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawString(
         self,
@@ -54,7 +54,7 @@ class QtCanvas(pid.Canvas):
         font: Incomplete | None = ...,
         color: Incomplete | None = ...,
         angle: int = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawImage(
         self,
@@ -63,7 +63,7 @@ class QtCanvas(pid.Canvas):
         y1,
         x2: Incomplete | None = ...,
         y2: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def stringWidth(self, s, font: Incomplete | None = ...): ...
     def fontAscent(self, font: Incomplete | None = ...): ...

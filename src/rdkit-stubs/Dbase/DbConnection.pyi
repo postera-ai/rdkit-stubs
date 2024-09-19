@@ -24,7 +24,7 @@ class DbConnect:
         join: str = ...,
         what: str = ...,
         where: str = ...,
-        **kwargs
+        **kwargs,
     ): ...
     def GetColumnNamesAndTypes(
         self,
@@ -32,7 +32,7 @@ class DbConnect:
         join: str = ...,
         what: str = ...,
         where: str = ...,
-        **kwargs
+        **kwargs,
     ): ...
     def GetColumns(self, fields, table: str = ..., join: str = ..., **kwargs): ...
     def GetData(
@@ -44,14 +44,14 @@ class DbConnect:
         join: str = ...,
         transform: Incomplete | None = ...,
         randomAccess: int = ...,
-        **kwargs
+        **kwargs,
     ): ...
     def GetDataCount(
         self,
         table: Incomplete | None = ...,
         where: str = ...,
         join: str = ...,
-        **kwargs
+        **kwargs,
     ): ...
     def GetCursor(self): ...
     def KillCursor(self) -> None: ...

@@ -54,7 +54,7 @@ class PDFCanvas(Canvas):
         color: Incomplete | None = ...,
         width: Incomplete | None = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawLines(
         self,
@@ -62,7 +62,7 @@ class PDFCanvas(Canvas):
         color: Incomplete | None = ...,
         width: Incomplete | None = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawString(
         self,
@@ -72,7 +72,7 @@ class PDFCanvas(Canvas):
         font: Incomplete | None = ...,
         color: Incomplete | None = ...,
         angle: int = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawCurve(
         self,
@@ -89,7 +89,7 @@ class PDFCanvas(Canvas):
         fillColor: Incomplete | None = ...,
         closed: int = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawRect(
         self,
@@ -101,7 +101,7 @@ class PDFCanvas(Canvas):
         edgeWidth: Incomplete | None = ...,
         fillColor: Incomplete | None = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawEllipse(
         self,
@@ -113,7 +113,7 @@ class PDFCanvas(Canvas):
         edgeWidth: Incomplete | None = ...,
         fillColor: Incomplete | None = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawArc(
         self,
@@ -127,7 +127,7 @@ class PDFCanvas(Canvas):
         edgeWidth: Incomplete | None = ...,
         fillColor: Incomplete | None = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawPolygon(
         self,
@@ -137,7 +137,7 @@ class PDFCanvas(Canvas):
         fillColor: Incomplete | None = ...,
         closed: int = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawImage(
         self,
@@ -146,7 +146,7 @@ class PDFCanvas(Canvas):
         y1,
         x2: Incomplete | None = ...,
         y2: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawLiteral(self, literal) -> None: ...
 

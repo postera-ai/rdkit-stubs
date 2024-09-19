@@ -16,7 +16,7 @@ def BuildSigTree(
     useCMIM: int = ...,
     allowCollections: bool = ...,
     verbose: int = ...,
-    **kwargs
+    **kwargs,
 ): ...
 def SigTreeBuilder(
     examples,
@@ -25,5 +25,5 @@ def SigTreeBuilder(
     initialVar: Incomplete | None = ...,
     ensemble: Incomplete | None = ...,
     randomDescriptors: int = ...,
-    **kwargs
+    **kwargs,
 ): ...

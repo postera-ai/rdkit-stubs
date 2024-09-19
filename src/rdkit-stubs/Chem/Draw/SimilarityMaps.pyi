@@ -20,7 +20,7 @@ def GetSimilarityMapFromWeights(
     contourLines: int = ...,
     alpha: float = ...,
     draw2d: Incomplete | None = ...,
-    **kwargs
+    **kwargs,
 ): ...
 def GetSimilarityMapForFingerprint(
     refMol, probeMol, fpFunction, metric=..., **kwargs
@@ -37,7 +37,7 @@ def GetAPFingerprint(
     minLength: int = ...,
     maxLength: int = ...,
     nBitsPerEntry: int = ...,
-    **kwargs
+    **kwargs,
 ): ...
 
 ttDict: Incomplete
@@ -49,7 +49,7 @@ def GetTTFingerprint(
     nBits: int = ...,
     targetSize: int = ...,
     nBitsPerEntry: int = ...,
-    **kwargs
+    **kwargs,
 ): ...
 def GetMorganFingerprint(
     mol,
@@ -58,7 +58,7 @@ def GetMorganFingerprint(
     fpType: str = ...,
     nBits: int = ...,
     useFeatures: bool = ...,
-    **kwargs
+    **kwargs,
 ): ...
 def GetRDKFingerprint(
     mol,
@@ -68,5 +68,5 @@ def GetRDKFingerprint(
     minPath: int = ...,
     maxPath: int = ...,
     nBitsPerHash: int = ...,
-    **kwargs
+    **kwargs,
 ): ...

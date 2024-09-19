@@ -11,7 +11,7 @@ def ID3(
     nPossibleVals,
     depth: int = ...,
     maxDepth: int = ...,
-    **kwargs
+    **kwargs,
 ): ...
 def ID3Boot(
     examples,
@@ -20,5 +20,5 @@ def ID3Boot(
     initialVar: Incomplete | None = ...,
     depth: int = ...,
     maxDepth: int = ...,
-    **kwargs
+    **kwargs,
 ): ...

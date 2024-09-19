@@ -10,7 +10,7 @@ def ChooseOptimalRoot(
     nPossibleVals,
     treeBuilder,
     nQuantBounds=...,
-    **kwargs
+    **kwargs,
 ): ...
 def CrossValidate(tree, testExamples, appendExamples: int = ...): ...
 def CrossValidationDriver(
@@ -25,6 +25,6 @@ def CrossValidationDriver(
     startAt: Incomplete | None = ...,
     nQuantBounds=...,
     maxDepth: int = ...,
-    **kwargs
+    **kwargs,
 ): ...
 def TestRun() -> None: ...

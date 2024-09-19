@@ -26,7 +26,7 @@ class RLCanvas(Canvas):
         color: Incomplete | None = ...,
         width: Incomplete | None = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawArc(
         self,
@@ -40,7 +40,7 @@ class RLCanvas(Canvas):
         edgeWidth: Incomplete | None = ...,
         fillColor: Incomplete | None = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawPolygon(
         self,
@@ -50,7 +50,7 @@ class RLCanvas(Canvas):
         fillColor=...,
         closed: int = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawString(
         self,
@@ -60,7 +60,7 @@ class RLCanvas(Canvas):
         font: Incomplete | None = ...,
         color: Incomplete | None = ...,
         angle: int = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawImage(
         self,
@@ -69,7 +69,7 @@ class RLCanvas(Canvas):
         y1,
         x2: Incomplete | None = ...,
         y2: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def stringWidth(self, s, font: Incomplete | None = ...): ...
     def fontAscent(self, font: Incomplete | None = ...): ...

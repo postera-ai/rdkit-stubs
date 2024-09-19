@@ -41,7 +41,7 @@ class SVGCanvas(Canvas):
         color: Incomplete | None = ...,
         width: Incomplete | None = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawPolygon(
         self,
@@ -51,7 +51,7 @@ class SVGCanvas(Canvas):
         fillColor=...,
         closed: int = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawEllipse(
         self,
@@ -63,7 +63,7 @@ class SVGCanvas(Canvas):
         edgeWidth: Incomplete | None = ...,
         fillColor=...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawString(
         self,
@@ -73,7 +73,7 @@ class SVGCanvas(Canvas):
         font: Incomplete | None = ...,
         color: Incomplete | None = ...,
         angle: int = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def _drawStringOneLine(self, line, x, y, fontStr, svgColor, **kwargs): ...
     def drawFigure(
@@ -84,7 +84,7 @@ class SVGCanvas(Canvas):
         fillColor: Incomplete | None = ...,
         closed: int = ...,
         dash: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def drawImage(
         self,
@@ -93,7 +93,7 @@ class SVGCanvas(Canvas):
         y1,
         x2: Incomplete | None = ...,
         y2: Incomplete | None = ...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
     def stringWidth(self, s, font: Incomplete | None = ...): ...
     def fontAscent(self, font: Incomplete | None = ...): ...

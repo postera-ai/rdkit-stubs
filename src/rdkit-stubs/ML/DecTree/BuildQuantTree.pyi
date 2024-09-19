@@ -11,7 +11,7 @@ def FindBest(
     nPossibleVals,
     attrs,
     exIndices: Incomplete | None = ...,
-    **kwargs
+    **kwargs,
 ): ...
 def BuildQuantTree(
     examples,
@@ -22,7 +22,7 @@ def BuildQuantTree(
     depth: int = ...,
     maxDepth: int = ...,
     exIndices: Incomplete | None = ...,
-    **kwargs
+    **kwargs,
 ): ...
 def QuantTreeBoot(
     examples,
@@ -31,7 +31,7 @@ def QuantTreeBoot(
     nBoundsPerVar,
     initialVar: Incomplete | None = ...,
     maxDepth: int = ...,
-    **kwargs
+    **kwargs,
 ): ...
 def TestTree() -> None: ...
 def TestQuantTree() -> None: ...

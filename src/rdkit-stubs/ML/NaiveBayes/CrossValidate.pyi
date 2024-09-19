@@ -13,7 +13,7 @@ def makeNBClassificationModel(
     useSigs: bool = ...,
     ensemble: Incomplete | None = ...,
     useCMIM: int = ...,
-    **kwargs
+    **kwargs,
 ): ...
 def CrossValidate(NBmodel, testExamples, appendExamples: int = ...): ...
 def CrossValidationDriver(
@@ -26,5 +26,5 @@ def CrossValidationDriver(
     modelBuilder=...,
     silent: int = ...,
     calcTotalError: int = ...,
-    **kwargs
+    **kwargs,
 ): ...

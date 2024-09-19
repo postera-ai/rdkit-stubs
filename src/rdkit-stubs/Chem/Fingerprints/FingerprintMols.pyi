@@ -15,7 +15,7 @@ def FingerprintsFromSmiles(
     fingerprinter=...,
     reportFreq: int = ...,
     maxMols: int = ...,
-    **fpArgs
+    **fpArgs,
 ): ...
 def FingerprintsFromMols(
     mols, fingerprinter=..., reportFreq: int = ..., maxMols: int = ..., **fpArgs
@@ -27,7 +27,7 @@ def FingerprintsFromPickles(
     fingerprinter=...,
     reportFreq: int = ...,
     maxMols: int = ...,
-    **fpArgs
+    **fpArgs,
 ): ...
 def FingerprintsFromDetails(details, reportFreq: int = ...): ...
 

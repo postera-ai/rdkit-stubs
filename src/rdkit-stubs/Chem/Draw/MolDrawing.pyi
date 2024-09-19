@@ -120,5 +120,5 @@ class MolDrawing:
         highlightMap: Incomplete | None = ...,
         ignoreHs: bool = ...,
         highlightBonds=...,
-        **kwargs
+        **kwargs,
     ) -> None: ...
