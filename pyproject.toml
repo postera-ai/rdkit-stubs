@@ -1,10 +1,11 @@
 [tool.poetry]
 name = "rdkit-stubs"
-version = "0.7"
+version = "0.8"
 description = "type stubs for rdkit"
 authors = [
   "Andrew Dirksen <andrew@dirksen.com>",
   "Ryan Rightmer <rrightmer@gmail.com>",
+  "K. Yanagisawa (https://github.com/keisuke-yanagisawa)",
 ]
 license = "MIT OR Apache-2.0"
 readme = "README.md"
