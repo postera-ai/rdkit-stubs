@@ -1,27 +1,26 @@
-[tool.poetry]
+[project]
 name = "rdkit-stubs"
 version = "0.8"
-description = "type stubs for rdkit"
+requires-python = ">=3.10"
 authors = [
-  "Andrew Dirksen <andrew@dirksen.com>",
-  "Ryan Rightmer <rrightmer@gmail.com>",
-  "K. Yanagisawa (https://github.com/keisuke-yanagisawa)",
+  { name = "Andrew Dirksen", email = "andrew@dirksen.com" },
+  { name = "Ryan Rightmer", email = "rrightmer@gmail.com" },
+  { name = "K. Yanagisawa" },
 ]
-license = "MIT OR Apache-2.0"
+description = "type stubs for rdkit"
 readme = "README.md"
-homepage = "https://github.com/postera-ai/rdkit-stubs"
+license = { text = "MIT OR Apache-2.0" }
 keywords = ["stubs", "rdkit", "typing"]
 classifiers = [
   "Development Status :: 1 - Planning",
   "Typing :: Stubs Only",
   "Programming Language :: Python :: 3.10",
 ]
-packages = [{ include = "rdkit-stubs" }]
-include = ["rdkit-stubs/**/*.pyi"]
+urls.Homepage = "https://github.com/postera-ai/rdkit-stubs"
 
-[tool.poetry.dependencies]
-python = "^3.10"
+[tool.setuptools.package-data]
+"*" = ["*.pyi"]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

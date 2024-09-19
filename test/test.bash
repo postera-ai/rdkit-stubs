@@ -16,6 +16,6 @@ poetry run mypy .
 poetry run pytest .
 
 # typecheck the stubs themselves
-cd ../rdkit-stubs
+cd "$parent"/..
 poetry run --directory "$parent" pyright .
 poetry run --directory "$parent" mypy .
